@@ -97,7 +97,7 @@
             this.btnObrisiProveruZnanja.Location = new System.Drawing.Point(268, 199);
             this.btnObrisiProveruZnanja.Name = "btnObrisiProveruZnanja";
             this.btnObrisiProveruZnanja.Size = new System.Drawing.Size(74, 23);
-            this.btnObrisiProveruZnanja.TabIndex = 11;
+            this.btnObrisiProveruZnanja.TabIndex = 6;
             this.btnObrisiProveruZnanja.Text = "Obriši";
             this.btnObrisiProveruZnanja.UseVisualStyleBackColor = true;
             this.btnObrisiProveruZnanja.Click += new System.EventHandler(this.btnObrisiProveruZnanja_Click);
@@ -107,7 +107,7 @@
             this.btnPonistiDodavanjeProvereZnanja.Location = new System.Drawing.Point(173, 152);
             this.btnPonistiDodavanjeProvereZnanja.Name = "btnPonistiDodavanjeProvereZnanja";
             this.btnPonistiDodavanjeProvereZnanja.Size = new System.Drawing.Size(74, 23);
-            this.btnPonistiDodavanjeProvereZnanja.TabIndex = 10;
+            this.btnPonistiDodavanjeProvereZnanja.TabIndex = 5;
             this.btnPonistiDodavanjeProvereZnanja.Text = "Poništi";
             this.btnPonistiDodavanjeProvereZnanja.UseVisualStyleBackColor = true;
             this.btnPonistiDodavanjeProvereZnanja.Click += new System.EventHandler(this.btnPonistiDodavanjeProvereZnanja_Click);
@@ -134,7 +134,7 @@
             this.btnDodajProveruZnanja.Location = new System.Drawing.Point(99, 152);
             this.btnDodajProveruZnanja.Name = "btnDodajProveruZnanja";
             this.btnDodajProveruZnanja.Size = new System.Drawing.Size(74, 23);
-            this.btnDodajProveruZnanja.TabIndex = 7;
+            this.btnDodajProveruZnanja.TabIndex = 4;
             this.btnDodajProveruZnanja.Text = "Dodaj";
             this.btnDodajProveruZnanja.UseVisualStyleBackColor = true;
             this.btnDodajProveruZnanja.Click += new System.EventHandler(this.btnDodajProveruZnanja_Click);
@@ -153,7 +153,7 @@
             this.txtGodinaProvere.Location = new System.Drawing.Point(147, 96);
             this.txtGodinaProvere.Name = "txtGodinaProvere";
             this.txtGodinaProvere.Size = new System.Drawing.Size(100, 20);
-            this.txtGodinaProvere.TabIndex = 5;
+            this.txtGodinaProvere.TabIndex = 2;
             // 
             // label2
             // 
@@ -178,7 +178,7 @@
             this.txtTrajanjeProvere.Location = new System.Drawing.Point(147, 122);
             this.txtTrajanjeProvere.Name = "txtTrajanjeProvere";
             this.txtTrajanjeProvere.Size = new System.Drawing.Size(100, 20);
-            this.txtTrajanjeProvere.TabIndex = 2;
+            this.txtTrajanjeProvere.TabIndex = 3;
             // 
             // txtNazivProvere
             // 
@@ -231,14 +231,14 @@
             this.cmbIdProvereZnanja.Location = new System.Drawing.Point(146, 95);
             this.cmbIdProvereZnanja.Name = "cmbIdProvereZnanja";
             this.cmbIdProvereZnanja.Size = new System.Drawing.Size(100, 21);
-            this.cmbIdProvereZnanja.TabIndex = 23;
+            this.cmbIdProvereZnanja.TabIndex = 8;
             // 
             // btnPonistiDodavanjePitanja
             // 
             this.btnPonistiDodavanjePitanja.Location = new System.Drawing.Point(172, 122);
             this.btnPonistiDodavanjePitanja.Name = "btnPonistiDodavanjePitanja";
             this.btnPonistiDodavanjePitanja.Size = new System.Drawing.Size(74, 23);
-            this.btnPonistiDodavanjePitanja.TabIndex = 22;
+            this.btnPonistiDodavanjePitanja.TabIndex = 10;
             this.btnPonistiDodavanjePitanja.Text = "Poništi";
             this.btnPonistiDodavanjePitanja.UseVisualStyleBackColor = true;
             this.btnPonistiDodavanjePitanja.Click += new System.EventHandler(this.btnPonistiDodavanjePitanja_Click);
@@ -265,9 +265,10 @@
             this.btnDodajPitanje.Location = new System.Drawing.Point(98, 122);
             this.btnDodajPitanje.Name = "btnDodajPitanje";
             this.btnDodajPitanje.Size = new System.Drawing.Size(74, 23);
-            this.btnDodajPitanje.TabIndex = 19;
+            this.btnDodajPitanje.TabIndex = 9;
             this.btnDodajPitanje.Text = "Dodaj";
             this.btnDodajPitanje.UseVisualStyleBackColor = true;
+            this.btnDodajPitanje.Click += new System.EventHandler(this.btnDodajPitanje_Click);
             // 
             // label8
             // 
@@ -283,14 +284,14 @@
             this.txtTekstPitanja.Location = new System.Drawing.Point(146, 70);
             this.txtTekstPitanja.Name = "txtTekstPitanja";
             this.txtTekstPitanja.Size = new System.Drawing.Size(100, 20);
-            this.txtTekstPitanja.TabIndex = 13;
+            this.txtTekstPitanja.TabIndex = 7;
             // 
             // btnObrisiPitanje
             // 
             this.btnObrisiPitanje.Location = new System.Drawing.Point(268, 199);
             this.btnObrisiPitanje.Name = "btnObrisiPitanje";
             this.btnObrisiPitanje.Size = new System.Drawing.Size(74, 23);
-            this.btnObrisiPitanje.TabIndex = 12;
+            this.btnObrisiPitanje.TabIndex = 11;
             this.btnObrisiPitanje.Text = "Obriši";
             this.btnObrisiPitanje.UseVisualStyleBackColor = true;
             this.btnObrisiPitanje.Click += new System.EventHandler(this.btnObrisiPitanje_Click);
@@ -337,9 +338,10 @@
             this.btnObrisiOdgovor.Location = new System.Drawing.Point(268, 199);
             this.btnObrisiOdgovor.Name = "btnObrisiOdgovor";
             this.btnObrisiOdgovor.Size = new System.Drawing.Size(74, 23);
-            this.btnObrisiOdgovor.TabIndex = 13;
+            this.btnObrisiOdgovor.TabIndex = 16;
             this.btnObrisiOdgovor.Text = "Obriši";
             this.btnObrisiOdgovor.UseVisualStyleBackColor = true;
+            this.btnObrisiOdgovor.Click += new System.EventHandler(this.btnObrisiOdgovor_Click);
             // 
             // cmbIdPitanja
             // 
@@ -347,7 +349,7 @@
             this.cmbIdPitanja.Location = new System.Drawing.Point(160, 95);
             this.cmbIdPitanja.Name = "cmbIdPitanja";
             this.cmbIdPitanja.Size = new System.Drawing.Size(100, 21);
-            this.cmbIdPitanja.TabIndex = 31;
+            this.cmbIdPitanja.TabIndex = 13;
             // 
             // dgvOdgovori
             // 
@@ -356,15 +358,17 @@
             this.dgvOdgovori.Name = "dgvOdgovori";
             this.dgvOdgovori.Size = new System.Drawing.Size(336, 191);
             this.dgvOdgovori.TabIndex = 2;
+            this.dgvOdgovori.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOdgovori_CellClick);
             // 
             // btnPonistiDodavanjeOdgovora
             // 
             this.btnPonistiDodavanjeOdgovora.Location = new System.Drawing.Point(186, 122);
             this.btnPonistiDodavanjeOdgovora.Name = "btnPonistiDodavanjeOdgovora";
             this.btnPonistiDodavanjeOdgovora.Size = new System.Drawing.Size(74, 23);
-            this.btnPonistiDodavanjeOdgovora.TabIndex = 30;
+            this.btnPonistiDodavanjeOdgovora.TabIndex = 15;
             this.btnPonistiDodavanjeOdgovora.Text = "Poništi";
             this.btnPonistiDodavanjeOdgovora.UseVisualStyleBackColor = true;
+            this.btnPonistiDodavanjeOdgovora.Click += new System.EventHandler(this.btnPonistiDodavanjeOdgovora_Click);
             // 
             // label9
             // 
@@ -380,7 +384,7 @@
             this.txtTekstOdgovora.Location = new System.Drawing.Point(160, 70);
             this.txtTekstOdgovora.Name = "txtTekstOdgovora";
             this.txtTekstOdgovora.Size = new System.Drawing.Size(100, 20);
-            this.txtTekstOdgovora.TabIndex = 25;
+            this.txtTekstOdgovora.TabIndex = 12;
             // 
             // txtIdOdgovora
             // 
@@ -404,9 +408,10 @@
             this.btnDodajOdgovor.Location = new System.Drawing.Point(112, 122);
             this.btnDodajOdgovor.Name = "btnDodajOdgovor";
             this.btnDodajOdgovor.Size = new System.Drawing.Size(74, 23);
-            this.btnDodajOdgovor.TabIndex = 27;
+            this.btnDodajOdgovor.TabIndex = 14;
             this.btnDodajOdgovor.Text = "Dodaj";
             this.btnDodajOdgovor.UseVisualStyleBackColor = true;
+            this.btnDodajOdgovor.Click += new System.EventHandler(this.btnDodajOdgovor_Click);
             // 
             // frmGlavna
             // 
