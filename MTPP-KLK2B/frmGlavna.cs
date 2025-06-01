@@ -280,7 +280,7 @@ namespace MTPP_KLK2B
                     var odgovor = context.Odgovori.Find(idOdgovora);
                     if (odgovor != null)
                     {
-                        odgovor.TekstOdgovora = txtIdOdgovora.Text;
+                        odgovor.TekstOdgovora = txtTekstOdgovora.Text;
                         odgovor.IdPitanja = Convert.ToInt16(cmbIdPitanja.SelectedValue);
                         context.SaveChanges();
                         dgvOdgovori.DataSource = context.Odgovori.ToList();

@@ -90,7 +90,7 @@
             this.gbProvereZnanja.Size = new System.Drawing.Size(348, 425);
             this.gbProvereZnanja.TabIndex = 0;
             this.gbProvereZnanja.TabStop = false;
-            this.gbProvereZnanja.Text = "ProvereZnanja";
+            this.gbProvereZnanja.Text = "Provere znanja";
             // 
             // btnObrisiProveruZnanja
             // 
