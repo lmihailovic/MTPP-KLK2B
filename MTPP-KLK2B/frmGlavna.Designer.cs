@@ -128,6 +128,7 @@
             this.txtIdProvereZnanja.ReadOnly = true;
             this.txtIdProvereZnanja.Size = new System.Drawing.Size(100, 20);
             this.txtIdProvereZnanja.TabIndex = 8;
+            this.txtIdProvereZnanja.TextChanged += new System.EventHandler(this.txtIdProvereZnanja_TextChanged);
             // 
             // btnDodajProveruZnanja
             // 
@@ -259,6 +260,7 @@
             this.txtIdPitanja.ReadOnly = true;
             this.txtIdPitanja.Size = new System.Drawing.Size(100, 20);
             this.txtIdPitanja.TabIndex = 20;
+            this.txtIdPitanja.TextChanged += new System.EventHandler(this.txtIdPitanja_TextChanged);
             // 
             // btnDodajPitanje
             // 
@@ -393,6 +395,7 @@
             this.txtIdOdgovora.ReadOnly = true;
             this.txtIdOdgovora.Size = new System.Drawing.Size(100, 20);
             this.txtIdOdgovora.TabIndex = 28;
+            this.txtIdOdgovora.TextChanged += new System.EventHandler(this.txtIdOdgovora_TextChanged);
             // 
             // label10
             // 

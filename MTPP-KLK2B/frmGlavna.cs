@@ -345,5 +345,29 @@ namespace MTPP_KLK2B
                 MessageBox.Show("Došlo je do greške prilikom brisanja odgovora: " + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtIdProvereZnanja_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIdProvereZnanja.Text == String.Empty)
+                btnDodajProveruZnanja.Text = "Dodaj";
+            else
+                btnDodajProveruZnanja.Text = "Izmeni";
+        }
+
+        private void txtIdPitanja_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIdPitanja.Text == String.Empty)
+                btnDodajPitanje.Text = "Dodaj";
+            else
+                btnDodajPitanje.Text = "Izmeni";
+        }
+
+        private void txtIdOdgovora_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIdOdgovora.Text == String.Empty)
+                btnDodajOdgovor.Text = "Dodaj";
+            else
+                btnDodajOdgovor.Text = "Izmeni";
+        }
     }
 }
