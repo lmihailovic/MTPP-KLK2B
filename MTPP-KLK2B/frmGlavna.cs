@@ -112,26 +112,33 @@ namespace MTPP_KLK2B
 
         private void btnObrisiProveruZnanja_Click(object sender, EventArgs e)
         {
-            using (var context = new ProveraZnanjaDB())
+            try
             {
-                int idProvere = Convert.ToInt16(dgvProvereZnanja.SelectedRows[0].Cells[0].Value);
-
-                if (MessageBox.Show("Da li ste sigurni da želite da obrišete ovu proveru znanja?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                using (var context = new ProveraZnanjaDB())
                 {
-                    var provera = context.ProveraZnanjas.Find(idProvere);
-                    if (provera != null)
+                    int idProvere = Convert.ToInt16(dgvProvereZnanja.SelectedRows[0].Cells[0].Value);
+
+                    if (MessageBox.Show("Da li ste sigurni da želite da obrišete ovu proveru znanja?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        context.ProveraZnanjas.Remove(provera);
-                        context.SaveChanges();
-                        dgvProvereZnanja.DataSource = context.ProveraZnanjas.ToList();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Provera znanja sa datim ID-jem ne postoji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        var provera = context.ProveraZnanjas.Find(idProvere);
+                        if (provera != null)
+                        {
+                            context.ProveraZnanjas.Remove(provera);
+                            context.SaveChanges();
+                            dgvProvereZnanja.DataSource = context.ProveraZnanjas.ToList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Provera znanja sa datim ID-jem ne postoji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+                AzurirajComboBoxProvereZnanja();
             }
-            AzurirajComboBoxProvereZnanja();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Došlo je do greške prilikom brisanja provere znanja: " + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AzurirajComboBoxProvereZnanja()
@@ -208,26 +215,33 @@ namespace MTPP_KLK2B
 
         private void btnObrisiPitanje_Click(object sender, EventArgs e)
         {
-            using (var context = new ProveraZnanjaDB())
+            try
             {
-                int idPitanja = Convert.ToInt16(dgvPitanja.SelectedRows[0].Cells[0].Value);
-
-                if (MessageBox.Show("Da li ste sigurni da želite da obrišete ovo pitanje?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                using (var context = new ProveraZnanjaDB())
                 {
-                    var pitanje = context.Pitanjas.Find(idPitanja);
-                    if (pitanje != null)
+                    int idPitanja = Convert.ToInt16(dgvPitanja.SelectedRows[0].Cells[0].Value);
+
+                    if (MessageBox.Show("Da li ste sigurni da želite da obrišete ovo pitanje?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        context.Pitanjas.Remove(pitanje);
-                        context.SaveChanges();
-                        dgvPitanja.DataSource = context.Pitanjas.ToList();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Pitanje sa datim ID-jem ne postoji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        var pitanje = context.Pitanjas.Find(idPitanja);
+                        if (pitanje != null)
+                        {
+                            context.Pitanjas.Remove(pitanje);
+                            context.SaveChanges();
+                            dgvPitanja.DataSource = context.Pitanjas.ToList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Pitanje sa datim ID-jem ne postoji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+                AzurirajComboBoxPitanja();
             }
-            AzurirajComboBoxPitanja();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Došlo je do greške prilikom brisanja pitanja: " + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AzurirajComboBoxPitanja()
@@ -303,24 +317,32 @@ namespace MTPP_KLK2B
 
         private void btnObrisiOdgovor_Click(object sender, EventArgs e)
         {
-            using (var context = new ProveraZnanjaDB())
+            try
             {
-                int idOdgovora = Convert.ToInt16(dgvOdgovori.SelectedRows[0].Cells[0].Value);
 
-                if (MessageBox.Show("Da li ste sigurni da želite da obrišete ovaj odgovor?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                using (var context = new ProveraZnanjaDB())
                 {
-                    var odgovor = context.Odgovori.Find(idOdgovora);
-                    if (odgovor!= null)
+                    int idOdgovora = Convert.ToInt16(dgvOdgovori.SelectedRows[0].Cells[0].Value);
+
+                    if (MessageBox.Show("Da li ste sigurni da želite da obrišete ovaj odgovor?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        context.Odgovori.Remove(odgovor);
-                        context.SaveChanges();
-                        dgvOdgovori.DataSource = context.Odgovori.ToList();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Odgovor sa datim ID-jem ne postoji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        var odgovor = context.Odgovori.Find(idOdgovora);
+                        if (odgovor != null)
+                        {
+                            context.Odgovori.Remove(odgovor);
+                            context.SaveChanges();
+                            dgvOdgovori.DataSource = context.Odgovori.ToList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Odgovor sa datim ID-jem ne postoji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Došlo je do greške prilikom brisanja odgovora: " + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
